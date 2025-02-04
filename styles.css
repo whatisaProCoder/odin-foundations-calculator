@@ -19,7 +19,7 @@ body {
     padding: 16px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
     .calculator {
       width: 90vw;
       height: 75vh;
@@ -30,11 +30,10 @@ body {
     .calculator {
         margin-bottom: 12vh;
         height: 50vh;
-        margin-left: 24px;
-        margin-right: 24px;
+        width: 70vh;
     }
     .display {
-        padding: 4px 16px;
+        font-size: 20px;
     }
     .calbutton {
         font-size: 24px;
