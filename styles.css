@@ -29,7 +29,9 @@ body {
     }
     .calculator {
         margin-bottom: 12vh;
-        height: 60vh;
+        height: 50vh;
+        margin-left: 4px;
+        margin-right: 4px;
     }
 }
 
