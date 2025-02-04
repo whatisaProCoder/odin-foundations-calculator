@@ -29,8 +29,7 @@ body {
     }
     .calculator {
         margin-bottom: 12vh;
-        height: 50vh;
-        width: 70vh;
+        height : 70vh;
     }
     .display {
         font-size: 20px;
