@@ -1,0 +1,132 @@
+body {
+    background-color: #121212;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.calculator {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(30, 30, 30, 0.85);
+    border-radius: 8px;
+    height: min(75vh, 600px); 
+    width: min(90vw, 400px);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    padding: 16px;
+}
+
+@media (max-width: 600px) {
+    .calculator {
+      width: 90vw;
+      height: 75vh;
+    }
+}
+
+.display {
+    text-align: right;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 15%;
+    font-size: 4em;
+    background-color: #272626;
+    padding: 0px 16px;
+    border-radius: 8px;
+    color: #E0E0E0;
+    border-style: solid;
+    border-color: #333333;
+    margin-bottom: 8px;
+    user-select: none;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    flex: 1;
+    margin-top: 8px;
+}
+
+.calbutton {
+    background-color: #2E2E2E;
+    color: #E0E0E0;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    user-select: none;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+.calbutton:hover {
+    background-color: #3E3E3E;
+}
+
+.calbutton:active {
+    transform: scale(0.95);
+}
+
+.operator-button {
+    background-color: #d48311;
+    font-weight: bolder;
+}
+
+.operator-button:hover {
+    background-color: #e59422;
+}
+
+.operator-button:active {
+    transform: scale(0.95);
+}
+
+.equals-button {
+    background-color: #4277ae;
+    font-size: 36px;
+    font-weight: bolder;
+}
+
+.equals-button:hover {
+    background-color: #5388bf;
+}
+
+.equals-button:active {
+    transform: scale(0.95);
+}
+
+.func-button {
+    background-color: #35ab3f;
+}
+
+.func-button:hover {
+    background-color: #46bc50;
+}
+
+.func-button:active {
+    transform: scale(0.95);
+}
+
+.course-name, .creator-name {
+    color: #797979;
+    font-size: 18px;
+    font-family: 'Gill Sans MT';
+}
+
+.course-name {
+    position: fixed;
+    left: 24px;
+    bottom: 20px;
+    color: #d48311;
+}
+
+.creator-name {
+    position: fixed;
+    right: 24px;
+    bottom: 20px;
+}
+
+
