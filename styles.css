@@ -20,10 +20,6 @@ body {
 }
 
 @media (max-width: 600px) {
-    .calculator {
-      width: 90vw;
-      height: 75vh;
-    }
     .creator-name, .course-name {
         bottom: 12px;
     }
