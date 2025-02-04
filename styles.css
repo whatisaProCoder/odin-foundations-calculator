@@ -36,6 +36,9 @@ body {
     .display {
         padding: 4px 16px;
     }
+    .calbutton {
+        font-size: 24px;
+    }
 }
 
 .display {
