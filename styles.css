@@ -27,6 +27,9 @@ body {
     .creator-name, .course-name {
         bottom: 12px;
     }
+    .calculator {
+        margin-bottom: 16px;
+    }
 }
 
 .display {
