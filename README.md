@@ -11,7 +11,7 @@ This is a simple calculator project built as part of The Odin Project Foundation
 
 ## Live Demo
 
-[## Live Demo](https://whatisaprocoder.github.io/odin-foundations-calculator/)
+[The Odin Project - Calculator](https://whatisaprocoder.github.io/odin-foundations-calculator/)
 
 ## Technologies Used
 
