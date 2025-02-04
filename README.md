@@ -4,10 +4,10 @@ This is a simple calculator project built as part of The Odin Project Foundation
 
 ## Features
 
-✅ Basic arithmetic operations (+, -, ×, ÷)
-✅ Interactive UI with button-based input
-✅ Clear and delete functionality
-✅ Responsive design
+- ✅ Basic arithmetic operations (+, -, ×, ÷)
+- ✅ Interactive UI with button-based input
+- ✅ Clear and delete functionality
+- ✅ Responsive design
 
 ## Live Demo
 
