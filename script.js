@@ -192,7 +192,7 @@ modulusButton.addEventListener("click", (e) => {
 });
 
 equalsButton.addEventListener("click", (e) => {
-    console.log(e);
+    console.log(e.target);
     if (operator !== null && b === null) {
         b = Number.parseFloat(getDisplayText());
         operate(operator, a, b);
