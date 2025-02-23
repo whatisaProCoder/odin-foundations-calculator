@@ -20,23 +20,20 @@ body {
 }
 
 @media (max-width: 600px) {
-    .calculator {
-      width: 90vw;
-      height: 75vh;
-    }
     .creator-name, .course-name {
         bottom: 12px;
     }
     .calculator {
         margin-bottom: 12vh;
-        height: 50vh;
-        width: 70vh;
+        height : 60vh;
+        margin-left : 5vh;
+        margin-right : 5vh;
     }
     .display {
         font-size: 20px;
     }
     .calbutton {
-        font-size: 24px;
+        font-size: 20px;
     }
 }
 
@@ -127,7 +124,7 @@ body {
 .course-name, .creator-name {
     color: #797979;
     font-size: 18px;
-    font-family: 'Gill Sans MT';
+    font-family: 'Candara';
 }
 
 .course-name {
