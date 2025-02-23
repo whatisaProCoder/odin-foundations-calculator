@@ -22,6 +22,10 @@ let a = null, b = null;
 let operator = null;
 
 function operate(operator, a, b) {
+    if (operator == '/' && b === 0) {
+        setDisplayText("Error");
+        return "Error";
+    }
     let result;
     if (operator == '+') {
         result = add(a, b);
@@ -32,10 +36,12 @@ function operate(operator, a, b) {
     } else if (operator == '/') {
         result = divide(a, b);
     } else if (operator == '%') {
-        result = a % b;
+        result = modulus(a, b);
     }
     setDisplayText(result);
+    return result;
 }
+
 
 // attach the buttons to event listeners
 const display = document.querySelector(".display");
@@ -140,53 +146,61 @@ zero.addEventListener("click", (e) => {
 
 dot.addEventListener("click", (e) => {
     console.log(e.target);
-    setDisplayText(getDisplayText() + ".");
+    if (!getDisplayText().includes(".")) {
+        setDisplayText(getDisplayText() + ".");
+    }
 });
+
+
+function handleOperatorClick(op) {
+    if (operator !== null && b === null) {
+        operator = op;
+        return;
+    }
+    if (a === null) {
+        a = Number.parseFloat(getDisplayText());
+    } else {
+        b = Number.parseFloat(getDisplayText());
+        a = operate(operator, a, b);
+    }
+    operator = op;
+    setDisplayText("");
+}
+
 
 plusButton.addEventListener("click", (e) => {
     console.log(e.target);
-    a = Number.parseFloat(getDisplayText());
-    operator = "+";
-    setDisplayText("");
+    handleOperatorClick("+");
 });
 
 minusButton.addEventListener("click", (e) => {
     console.log(e.target);
-    a = Number.parseFloat(getDisplayText());
-    operator = "-";
-    setDisplayText("");
+    handleOperatorClick("-");
 });
 
 multiplyButton.addEventListener("click", (e) => {
     console.log(e.target);
-    a = Number.parseFloat(getDisplayText());
-    operator = "*";
-    setDisplayText("");
+    handleOperatorClick("*");
 });
 
 divideButton.addEventListener("click", (e) => {
     console.log(e.target);
-    a = Number.parseFloat(getDisplayText());
-    operator = "/";
-    setDisplayText("");
+    handleOperatorClick("/");
 });
 
 modulusButton.addEventListener("click", (e) => {
     console.log(e.target);
-    a = Number.parseFloat(getDisplayText());
-    operator = "%";
-    setDisplayText("");
+    handleOperatorClick("%");
 });
 
 equalsButton.addEventListener("click", (e) => {
     console.log(e);
-    b = Number.parseFloat(getDisplayText());
-    operate(operator, a, b);
-    a = Number.parseFloat(getDisplayText());
-    b = null;
-    operator = null;
+    if (operator !== null && b === null) {
+        b = Number.parseFloat(getDisplayText());
+        operate(operator, a, b);
+        a = Number.parseFloat(getDisplayText());
+        b = null;
+        operator = null;
+    }
 });
-
-
-
 
