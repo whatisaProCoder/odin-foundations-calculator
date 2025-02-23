@@ -77,7 +77,7 @@ function getDisplayText() {
 }
 
 ac.addEventListener("click", (e) => {
-    console.log(e.target);
+    console.log(e.target.id);
     setDisplayText("");
     a = null;
     b = null;
@@ -85,7 +85,7 @@ ac.addEventListener("click", (e) => {
 });
 
 plusminus.addEventListener("click", (e) => {
-    console.log(e.target);
+    console.log(e.target.id);
     let currentText = getDisplayText();
     let number = parseFloat(currentText);
     if (!isNaN(number)) {
@@ -95,57 +95,57 @@ plusminus.addEventListener("click", (e) => {
 });
 
 one.addEventListener("click", (e) => {
-    console.log(e.target);
+    console.log(e.target.id);
     setDisplayText(getDisplayText() + "1");
 });
 
 two.addEventListener("click", (e) => {
-    console.log(e.target);
+    console.log(e.target.id);
     setDisplayText(getDisplayText() + "2");
 });
 
 three.addEventListener("click", (e) => {
-    console.log(e.target);
+    console.log(e.target.id);
     setDisplayText(getDisplayText() + "3");
 });
 
 four.addEventListener("click", (e) => {
-    console.log(e.target);
+    console.log(e.target.id);
     setDisplayText(getDisplayText() + "4");
 });
 
 five.addEventListener("click", (e) => {
-    console.log(e.target);
+    console.log(e.target.id);
     setDisplayText(getDisplayText() + "5");
 });
 
 six.addEventListener("click", (e) => {
-    console.log(e.target);
+    console.log(e.target.id);
     setDisplayText(getDisplayText() + "6");
 });
 
 seven.addEventListener("click", (e) => {
-    console.log(e.target);
+    console.log(e.target.id);
     setDisplayText(getDisplayText() + "7");
 });
 
 eight.addEventListener("click", (e) => {
-    console.log(e.target);
+    console.log(e.target.id);
     setDisplayText(getDisplayText() + "8");
 });
 
 nine.addEventListener("click", (e) => {
-    console.log(e.target);
+    console.log(e.target.id);
     setDisplayText(getDisplayText() + "9");
 });
 
 zero.addEventListener("click", (e) => {
-    console.log(e.target);
+    console.log(e.target.id);
     setDisplayText(getDisplayText() + "0");
 });
 
 dot.addEventListener("click", (e) => {
-    console.log(e.target);
+    console.log(e.target.id);
     if (!getDisplayText().includes(".")) {
         setDisplayText(getDisplayText() + ".");
     }
@@ -167,32 +167,32 @@ function handleOperatorClick(op) {
 
 
 plusButton.addEventListener("click", (e) => {
-    console.log(e.target);
+    console.log(e.target.id);
     handleOperatorClick("+");
 });
 
 minusButton.addEventListener("click", (e) => {
-    console.log(e.target);
+    console.log(e.target.id);
     handleOperatorClick("-");
 });
 
 multiplyButton.addEventListener("click", (e) => {
-    console.log(e.target);
+    console.log(e.target.id);
     handleOperatorClick("*");
 });
 
 divideButton.addEventListener("click", (e) => {
-    console.log(e.target);
+    console.log(e.target.id);
     handleOperatorClick("/");
 });
 
 modulusButton.addEventListener("click", (e) => {
-    console.log(e.target);
+    console.log(e.target.id);
     handleOperatorClick("%");
 });
 
 equalsButton.addEventListener("click", (e) => {
-    console.log(e.target);
+    console.log(e.target.id);
     if (operator !== null && b === null) {
         b = Number.parseFloat(getDisplayText());
         operate(operator, a, b);
