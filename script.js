@@ -154,14 +154,12 @@ dot.addEventListener("click", (e) => {
 
 function handleOperatorClick(op) {
     if (operator !== null && b === null) {
-        operator = op;
-        return;
-    }
-    if (a === null) {
-        a = Number.parseFloat(getDisplayText());
-    } else {
         b = Number.parseFloat(getDisplayText());
-        a = operate(operator, a, b);
+        operate(operator, a, b);
+        a = Number.parseFloat(getDisplayText());
+        b = null;
+    } else {
+        a = Number.parseFloat(getDisplayText());
     }
     operator = op;
     setDisplayText("");
